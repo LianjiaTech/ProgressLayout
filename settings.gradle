@@ -1,1 +1,1 @@
-include ':sample', ':smartProgressLayout'
+include ':sample', ':SmartProgressLayout'
