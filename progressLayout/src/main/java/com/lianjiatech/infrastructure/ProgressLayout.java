@@ -17,6 +17,7 @@ import java.util.List;
 public class ProgressLayout extends RelativeLayout {
 
     private static final int defStyleAttr = R.attr.progressLayoutDefStyle;
+    private static final int NOT_SET = -1;
 
     private static final String LOADING_TAG = "ProgressLayout.loading_tag";
     private static final String NONE_TAG = "ProgressLayout.none_tag";
@@ -48,7 +49,8 @@ public class ProgressLayout extends RelativeLayout {
     @IntDef(value = { LOADING, NONE, CONTENT, NETWORK_ERROR, FAILED })
     public @interface LAYOUT_TYPE {}
 
-    @LAYOUT_TYPE private int currentState = LOADING;
+    @LAYOUT_TYPE
+    private int currentState = LOADING;
 
     public ProgressLayout(Context context) {
         this(context, null);
@@ -67,16 +69,25 @@ public class ProgressLayout extends RelativeLayout {
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
 
-        this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ProgressLayout, defStyleAttr, R.style.DefaultSmartStyle);
+        this.layoutInflater =
+                (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        TypedArray typedArray =
+                context.obtainStyledAttributes(attrs, R.styleable.ProgressLayout, defStyleAttr,
+                        R.style.DefaultSmartStyle);
 
-        if (typedArray == null) return;
+        if (typedArray == null) {
+            return;
+        }
 
         try {
-            this.loadingId = typedArray.getResourceId(R.styleable.ProgressLayout_loading_layout, -1);
-            this.noneId = typedArray.getResourceId(R.styleable.ProgressLayout_none_content, -1);
-            this.networkErrorId = typedArray.getResourceId(R.styleable.ProgressLayout_network_content, -1);
-            this.failedId = typedArray.getResourceId(R.styleable.ProgressLayout_failed_content, -1);
+            this.loadingId =
+                    typedArray.getResourceId(R.styleable.ProgressLayout_loading_layout, NOT_SET);
+            this.noneId =
+                    typedArray.getResourceId(R.styleable.ProgressLayout_none_content, NOT_SET);
+            this.networkErrorId =
+                    typedArray.getResourceId(R.styleable.ProgressLayout_network_content, NOT_SET);
+            this.failedId =
+                    typedArray.getResourceId(R.styleable.ProgressLayout_failed_content, NOT_SET);
         } finally {
             typedArray.recycle();
         }
@@ -87,7 +98,8 @@ public class ProgressLayout extends RelativeLayout {
         super.addView(child, index, params);
 
         if (child.getTag() == null ||
-                (!child.getTag().equals(LOADING_TAG) && !child.getTag().equals(NONE_TAG) && !child.getTag().equals(ERROR_TAG))) {
+                (!child.getTag().equals(LOADING_TAG) && !child.getTag().equals(NONE_TAG) &&
+                        !child.getTag().equals(ERROR_TAG))) {
 
             this.contentViews.add(child);
             this.setContentVisibility(false);
@@ -98,7 +110,7 @@ public class ProgressLayout extends RelativeLayout {
 
         ProgressLayout.this.showLoadingView();
 
-        ProgressLayout.this.hideNoContentView();
+        ProgressLayout.this.hideNoneView();
         ProgressLayout.this.hideNetErrorView();
         ProgressLayout.this.hideFailedView();
         ProgressLayout.this.setContentVisibility(false);
@@ -127,7 +139,7 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.showNetErrorView(retryListener);
 
         ProgressLayout.this.hideLoadingView();
-        ProgressLayout.this.hideNoContentView();
+        ProgressLayout.this.hideNoneView();
         ProgressLayout.this.hideFailedView();
         ProgressLayout.this.setContentVisibility(false);
     }
@@ -141,7 +153,7 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.showFailedView(retryListener);
 
         ProgressLayout.this.hideLoadingView();
-        ProgressLayout.this.hideNoContentView();
+        ProgressLayout.this.hideNoneView();
         ProgressLayout.this.hideNetErrorView();
         ProgressLayout.this.setContentVisibility(false);
     }
@@ -149,7 +161,7 @@ public class ProgressLayout extends RelativeLayout {
     public void showContent() {
 
         ProgressLayout.this.hideLoadingView();
-        ProgressLayout.this.hideNoContentView();
+        ProgressLayout.this.hideNoneView();
         ProgressLayout.this.hideNetErrorView();
         ProgressLayout.this.hideFailedView();
 
@@ -166,7 +178,13 @@ public class ProgressLayout extends RelativeLayout {
 
         if (this.loadingContainer == null) {
 
-            this.loadingContainer = this.layoutInflater.inflate(loadingId, ProgressLayout.this, false);
+            if (loadingId == NOT_SET) {
+                throw new IllegalStateException(
+                        "cannot call showLoadingView() when loadingId was equals -1");
+            }
+
+            this.loadingContainer =
+                    this.layoutInflater.inflate(loadingId, ProgressLayout.this, false);
             this.loadingContainer.setTag(LOADING_TAG);
 
             LayoutParams layoutParams = (LayoutParams) loadingContainer.getLayoutParams();
@@ -187,6 +205,11 @@ public class ProgressLayout extends RelativeLayout {
     private void showNoneView(OnClickListener retryListener) {
 
         if (this.noneContainer == null) {
+
+            if (noneId == NOT_SET) {
+                throw new IllegalStateException(
+                        "cannot call showNoneView() when noneId was equals -1");
+            }
 
             this.noneContainer = this.layoutInflater.inflate(noneId, ProgressLayout.this, false);
             this.noneContainer.setTag(NONE_TAG);
@@ -215,7 +238,13 @@ public class ProgressLayout extends RelativeLayout {
 
         if (this.networkErrorContainer == null) {
 
-            this.networkErrorContainer = this.layoutInflater.inflate(networkErrorId, ProgressLayout.this, false);
+            if (networkErrorId == NOT_SET) {
+                throw new IllegalStateException(
+                        "cannot call showNetErrorView() when networkErrorId was equals -1");
+            }
+
+            this.networkErrorContainer =
+                    this.layoutInflater.inflate(networkErrorId, ProgressLayout.this, false);
             this.networkErrorContainer.setTag(ERROR_TAG);
 
             LayoutParams layoutParams = (LayoutParams) networkErrorContainer.getLayoutParams();
@@ -242,7 +271,13 @@ public class ProgressLayout extends RelativeLayout {
 
         if (this.failedContainer == null) {
 
-            this.failedContainer = this.layoutInflater.inflate(failedId, ProgressLayout.this, false);
+            if (failedId == NOT_SET) {
+                throw new IllegalStateException(
+                        "cannot call showFailedView() when failedId was equals -1");
+            }
+
+            this.failedContainer =
+                    this.layoutInflater.inflate(failedId, ProgressLayout.this, false);
             this.failedContainer.setTag(ERROR_TAG);
 
             LayoutParams layoutParams = (LayoutParams) failedContainer.getLayoutParams();
@@ -267,7 +302,7 @@ public class ProgressLayout extends RelativeLayout {
     }
 
     /** 隐藏无内容界面 */
-    private void hideNoContentView() {
+    private void hideNoneView() {
         if (noneContainer != null && noneContainer.getVisibility() != GONE) {
             this.noneContainer.setVisibility(GONE);
         }
@@ -280,7 +315,7 @@ public class ProgressLayout extends RelativeLayout {
         }
     }
 
-    /** 隐藏网络错误界面 */
+    /** 隐藏数据错误界面 */
     private void hideFailedView() {
         if (failedContainer != null && failedContainer.getVisibility() != GONE) {
             this.failedContainer.setVisibility(GONE);
@@ -291,20 +326,20 @@ public class ProgressLayout extends RelativeLayout {
         return this.currentState == LOADING;
     }
 
-    public boolean isnOContent() {
-        return this.currentState == NONE;
-    }
-
     public boolean isContent() {
         return this.currentState == CONTENT;
     }
 
-    public boolean isFailed() {
-        return this.currentState == FAILED;
+    public boolean isNone() {
+        return this.currentState == NONE;
     }
 
     public boolean isNetworkError() {
         return this.currentState == NETWORK_ERROR;
+    }
+
+    public boolean isFailed() {
+        return this.currentState == FAILED;
     }
 
     private void setContentVisibility(boolean visible) {

@@ -88,7 +88,7 @@
       android:textSize="@dimen/material_23sp"
       android:shadowDy="10"
       android:shadowRadius="4"
-      android:textColor="@android:color/holo_green_dark"
+      android:textColor="@color/homeLinkGreen"
       android:shadowColor="@android:color/holo_orange_light"
       android:text="@string/homelink"
       />
