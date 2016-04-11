@@ -1,0 +1,7 @@
+<resources>
+  <string name="loading_message">正在加载</string>
+  <string name="none_message">无内容</string>
+  <string name="net_error_message">网络连接中断</string>
+  <string name="failed_message">数据请求失败</string>
+  <string name="retry_message">点击屏幕重试</string>
+</resources>
