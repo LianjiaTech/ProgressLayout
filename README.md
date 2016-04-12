@@ -35,7 +35,12 @@
 
 ```java
 <com.lianjiatech.infrastructure.ProgressLayout
-      ......
+      android:layout_below="@id/scroller"
+      android:id="@+id/progress_container"
+      android:layout_margin="@dimen/material_4dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/boundary_background"
       app:loading_layout="@layout/loading_layout"
       app:none_content="@layout/none_layout"
       app:network_content="@layout/connectionless_layout"
@@ -68,6 +73,20 @@
     <item name="failed_content">@layout/failed_layout</item>
   </style>
 ```
+
+**函数使用**
+通过调用不同的方法，来展示对应的页面，如`.showLoading();`、`.showContent()`等。或者为“错误页面”添加点击重试事件：
+
+```java
+  progressLayout.showNetError(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*重试逻辑*/
+            }
+        });
+```
+
+
 
 **Gradle**
 
