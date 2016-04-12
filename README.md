@@ -1,15 +1,34 @@
 #ProgressLayout
 
-![](https://github.com/SmartDengg/ProgressLayout/blob/master/images/launcher.png)
-
+[![](https://jitpack.io/v/LianjiaTech/ProgressLayout.svg)](https://jitpack.io/#LianjiaTech/ProgressLayout)
 
 ##介绍
 -----------------
 
+<img align="left" src='https://github.com/SmartDengg/ProgressLayout/blob/master/images/launcher.png' width='200' height='200'/>
+
 一个轻量的ProgressLayout，能够帮助你实现“加载中”、“无内容”，“网络错误”，“加载失败”等不同场景下的页面切换与展示，并且支持点击页面重试。
+
 
 ##用法
 -----------------
+
+首先，在项目根目录下的`build.gradle`中添加如下代码：
+```java
+ allprojects {
+    repositories {
+      ...
+      maven { url "https://jitpack.io" }
+    }
+  }
+```
+
+其次，在module的`build.gradle`中添加最新版本库的依赖：
+```java
+ dependencies {
+           compile 'com.github.LianjiaTech:ProgressLayout:x.y.z'
+  }
+```
 
 可以使用以下几种属性来指定不同情况需要展现的layout：
 
@@ -53,6 +72,7 @@
   </com.lianjiatech.infrastructure.ProgressLayout>
 ```
 
+
 **在Theme中设置**
 
 如果不同的Activity需要对应不同的页面，也可以通过在Theme中指定`progressLayoutDefStyle`的方式来设置需要的Layout：
@@ -74,6 +94,7 @@
   </style>
 ```
 
+
 **函数使用**
 
 通过调用不同的方法，来展示对应的页面，如`.showLoading();`、`.showContent()`等。或者为“错误页面”添加点击重试事件：
@@ -85,27 +106,6 @@
                 /*重试逻辑*/
             }
         });
-```
-
-
-
-**Gradle**
-
-在项目根目录下的`build.gradle`中添加如下代码：
-```java
- allprojects {
-    repositories {
-      ...
-      maven { url "https://jitpack.io" }
-    }
-  }
-```
-
-在module的`build.gradle`中添加最新版本库的依赖：
-```java
- dependencies {
-          compile 'com.github.SmartDengg:ProgressLayout:x.y.z'
-  }
 ```
 
 ##截图
