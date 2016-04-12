@@ -2,7 +2,7 @@
 
 [![](https://jitpack.io/v/LianjiaTech/ProgressLayout.svg)](https://jitpack.io/#LianjiaTech/ProgressLayout)
 
-![](https://github.com/LianjiaTech/ProgressLayout/blob/master/images/launcher.png)
+![](./images/launcher.png)
 
 
 介绍
@@ -112,14 +112,14 @@
 GIF
 --------
 
-![](https://github.com/LianjiaTech/ProgressLayout/blob/master/images/progresslayout.gif)
+![](./images/progresslayout.gif)
 
 Developed By
 --------
 
 - 小鄧子 - dengwei@lianjia.com
 
-<a href="http://homelinkcn.github.io/"><img src="https://github.com/LianjiaTech/ProgressLayout/blob/master/images/homelink.png" />
+<a href="http://homelinkcn.github.io/"><img src="./images/homelink.png" />
 </a>
 
 
