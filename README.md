@@ -108,7 +108,7 @@
         });
 ```
 
-##截图
+##GIF
 -----------------
 
 ![](https://github.com/SmartDengg/ProgressLayout/blob/master/images/progresslayout.gif)
