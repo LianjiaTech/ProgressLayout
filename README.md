@@ -7,13 +7,11 @@
 
 
 ##介绍
---------
 
 一个轻量的ProgressLayout，能够帮助你实现“加载中”、“无内容”，“网络错误”，“加载失败”等不同场景下的页面切换与展示，并且支持点击页面重试。
 
 
 ##用法
---------
 
 首先，在项目根目录下的`build.gradle`中添加如下代码：
 ```java
@@ -111,12 +109,10 @@
 ```
 
 ##GIF
---------
 
 ![](https://github.com/LianjiaTech/ProgressLayout/blob/master/images/progresslayout.gif)
 
 ##Developed By
---------
 
 - 小鄧子 - dengwei@lianjia.com
 
@@ -125,7 +121,6 @@
 
 
 ##License
---------
 
     Copyright 2016 LianjiaTech, Inc.
     Licensed under the Apache License, Version 2.0 (the "License");
