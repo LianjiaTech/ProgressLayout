@@ -1,6 +1,6 @@
 #ProgressLayout
 
-![](https://github.com/SmartDengg/ProgressLayout/blob/master/screenShot/launcher.png)
+![](https://github.com/SmartDengg/ProgressLayout/blob/master/images/launcher.png)
 
 
 ##介绍
@@ -74,20 +74,49 @@
   </style>
 ```
 
+**Gradle**
+
+在项目根目录下的`build.gradle`中添加如下代码：
+```java
+ allprojects {
+    repositories {
+      ...
+      maven { url "https://jitpack.io" }
+    }
+  }
+```
+
+在module的`build.gradle`中添加最新版本库的依赖：
+```java
+ dependencies {
+          compile 'com.github.SmartDengg:ProgressLayout:x.y.z'
+  }
+```
+
 ##截图
 -----------------
-
-
-
-
-
-
+![](https://github.com/SmartDengg/ProgressLayout/blob/master/images/progresslayout.gif)
 
 ##Developed By
 -----------------
 
 - 小鄧子 - Hi4Joker@gmail.com
 
-<a href="http://weibo.com/5367097592/profile?rightmod=1&wvr=6&mod=personinfo">
-  <img alt="Follow me on Weibo" src="http://upload-images.jianshu.io/upload_images/268450-50e41e15ac29b776.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" />
+<a href="http://homelinkcn.github.io/"><img alt="Follow me on Weibo" src="https://github.com/SmartDengg/ProgressLayout/blob/master/images/homelink.png" />
 </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
