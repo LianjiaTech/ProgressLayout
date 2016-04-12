@@ -1,17 +1,19 @@
 #ProgressLayout
+=======
 
 [![](https://jitpack.io/v/LianjiaTech/ProgressLayout.svg)](https://jitpack.io/#LianjiaTech/ProgressLayout)
 
-##介绍
------------------
+![](https://github.com/LianjiaTech/ProgressLayout/blob/master/images/launcher.png)
 
-<img align="left" src='https://github.com/SmartDengg/ProgressLayout/blob/master/images/launcher.png' width='200' height='200'/>
+
+##介绍
+--------
 
 一个轻量的ProgressLayout，能够帮助你实现“加载中”、“无内容”，“网络错误”，“加载失败”等不同场景下的页面切换与展示，并且支持点击页面重试。
 
 
 ##用法
------------------
+--------
 
 首先，在项目根目录下的`build.gradle`中添加如下代码：
 ```java
@@ -109,35 +111,34 @@
 ```
 
 ##GIF
------------------
+--------
 
-![](https://github.com/SmartDengg/ProgressLayout/blob/master/images/progresslayout.gif)
+![](https://github.com/LianjiaTech/ProgressLayout/blob/master/images/progresslayout.gif)
 
 ##Developed By
------------------
+--------
 
 - 小鄧子 - dengwei@lianjia.com
 
-<a href="http://homelinkcn.github.io/"><img src="https://github.com/SmartDengg/ProgressLayout/blob/master/images/homelink.png" />
+<a href="http://homelinkcn.github.io/"><img src="https://github.com/LianjiaTech/ProgressLayout/blob/master/images/homelink.png" />
 </a>
 
 
 ##License
+--------
 
-  Copyright 2016 LianjiaTech, Inc.
-  
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-  
-     http://www.apache.org/licenses/LICENSE-2.0
-  
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-
+    Copyright 2016 LianjiaTech, Inc.
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+ 
+      http://www.apache.org/licenses/LICENSE-2.0
+ 
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.    
 
 
 
