@@ -1,17 +1,18 @@
 #ProgressLayout
-=======
 
 [![](https://jitpack.io/v/LianjiaTech/ProgressLayout.svg)](https://jitpack.io/#LianjiaTech/ProgressLayout)
 
 ![](https://github.com/LianjiaTech/ProgressLayout/blob/master/images/launcher.png)
 
 
-##介绍
+介绍
+--------
 
 一个轻量的ProgressLayout，能够帮助你实现“加载中”、“无内容”，“网络错误”，“加载失败”等不同场景下的页面切换与展示，并且支持点击页面重试。
 
 
-##用法
+用法
+--------
 
 首先，在项目根目录下的`build.gradle`中添加如下代码：
 ```java
@@ -30,7 +31,7 @@
   }
 ```
 
-可以使用以下几种属性来指定不同情况需要展现的layout：
+可以通过下几种属性来指定不同情况需要展现的layout：
 
 ```java
 <resources>
@@ -108,11 +109,13 @@
         });
 ```
 
-##GIF
+GIF
+--------
 
 ![](https://github.com/LianjiaTech/ProgressLayout/blob/master/images/progresslayout.gif)
 
-##Developed By
+Developed By
+--------
 
 - 小鄧子 - dengwei@lianjia.com
 
@@ -120,7 +123,8 @@
 </a>
 
 
-##License
+License
+--------
 
     Copyright 2016 LianjiaTech, Inc.
     Licensed under the Apache License, Version 2.0 (the "License");
