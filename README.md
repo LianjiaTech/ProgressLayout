@@ -115,7 +115,7 @@
 ##Developed By
 -----------------
 
-- 小鄧子 - Hi4Joker@gmail.com
+- 小鄧子 - dengwei@lianjia.com
 
 <a href="http://homelinkcn.github.io/"><img alt="Follow me on Weibo" src="https://github.com/SmartDengg/ProgressLayout/blob/master/images/homelink.png" />
 </a>
