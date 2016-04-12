@@ -23,7 +23,7 @@
   }
 ```
 
-其次，在module的`build.gradle`中添加最新版本库的依赖：
+其次，在module的`build.gradle`中添加[最新版本库](https://github.com/LianjiaTech/ProgressLayout/releases)的依赖:
 ```java
  dependencies {
            compile 'com.github.LianjiaTech:ProgressLayout:x.y.z'
@@ -110,6 +110,7 @@
 
 ##截图
 -----------------
+
 ![](https://github.com/SmartDengg/ProgressLayout/blob/master/images/progresslayout.gif)
 
 ##Developed By
@@ -117,11 +118,25 @@
 
 - 小鄧子 - dengwei@lianjia.com
 
-<a href="http://homelinkcn.github.io/"><img alt="Follow me on Weibo" src="https://github.com/SmartDengg/ProgressLayout/blob/master/images/homelink.png" />
+<a href="http://homelinkcn.github.io/"><img src="https://github.com/SmartDengg/ProgressLayout/blob/master/images/homelink.png" />
 </a>
 
 
+##License
 
+  Copyright 2016 LianjiaTech, Inc.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+     http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 
 
 
