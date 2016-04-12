@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/view_failed_layout_root_view"
+    android:id="@+id/view_net_error_layout_root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical">
-
 
   <TextView
       android:text="@string/retry_message"
@@ -13,7 +12,7 @@
 
   <TextView
       style="@style/message_style"
-      android:text="@string/failed_message"
+      android:text="@string/net_error_message"
   />
 
 </LinearLayout>

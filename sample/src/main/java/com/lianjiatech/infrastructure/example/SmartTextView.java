@@ -10,24 +10,24 @@ import android.widget.TextView;
  */
 public class SmartTextView extends TextView {
 
-  public SmartTextView(Context context) {
-    this(context, null);
-  }
-
-  public SmartTextView(Context context, AttributeSet attrs) {
-    this(context, attrs, 0);
-  }
-
-  public SmartTextView(Context context, AttributeSet attrs, int defStyleAttr) {
-    super(context, attrs, defStyleAttr);
-    if (!isInEditMode()) {
-      SmartTextView.this.init(context);
+    public SmartTextView(Context context) {
+        this(context, null);
     }
-  }
 
-  private void init(Context context) {
+    public SmartTextView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
 
-    Typeface typeface = Typeface.createFromAsset(context.getAssets(), "Lobster-Regular.ttf");
-    this.setTypeface(typeface);
-  }
+    public SmartTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        if (!this.isInEditMode()) {
+            SmartTextView.this.init(context);
+        }
+    }
+
+    private void init(Context context) {
+
+        Typeface typeface = Typeface.createFromAsset(context.getAssets(), "Lobster-Regular.ttf");
+        this.setTypeface(typeface);
+    }
 }

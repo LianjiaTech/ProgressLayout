@@ -18,9 +18,9 @@
 
   <style name="progressLayoutStyle">
     <item name="loading_layout">@layout/loading_layout</item>
-    <!--<item name="none_content">@layout/none_layout</item>-->
-    <!--<item name="network_content">@layout/net_error_layout</item>-->
-    <!--<item name="failed_content">@layout/failed_layout</item>-->
+    <item name="none_content">@layout/none_layout</item>
+    <item name="network_content">@layout/connectionless_layout</item>
+    <item name="failed_content">@layout/failed_layout</item>
   </style>
 
 </resources>

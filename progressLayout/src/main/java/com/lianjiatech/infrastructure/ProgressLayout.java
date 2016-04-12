@@ -101,7 +101,10 @@ public class ProgressLayout extends RelativeLayout {
                         !child.getTag().equals(ERROR_TAG))) {
 
             this.contentViews.add(child);
-            this.setContentVisibility(false);
+
+            if (!this.isInEditMode()) {
+                this.setContentVisibility(false);
+            }
         }
     }
 
@@ -178,7 +181,7 @@ public class ProgressLayout extends RelativeLayout {
 
             if (loadingId == NOT_SET) {
                 throw new IllegalStateException(
-                        "cannot call showLoadingView() when loadingId was equals -1");
+                        "cannot call showLoadingView() when loadingId was NO_SET which value is -1");
             }
 
             this.loadingContainer =
@@ -206,7 +209,7 @@ public class ProgressLayout extends RelativeLayout {
 
             if (noneId == NOT_SET) {
                 throw new IllegalStateException(
-                        "cannot call showNoneView() when noneId was equals -1");
+                        "cannot call showNoneView() when noneId was NO_SET which value is -1");
             }
 
             this.noneContainer = this.layoutInflater.inflate(noneId, ProgressLayout.this, false);
@@ -238,7 +241,7 @@ public class ProgressLayout extends RelativeLayout {
 
             if (networkErrorId == NOT_SET) {
                 throw new IllegalStateException(
-                        "cannot call showNetErrorView() when networkErrorId was equals -1");
+                        "cannot call showNetErrorView() when networkErrorId was NO_SET which value is -1");
             }
 
             this.networkErrorContainer =
@@ -271,7 +274,7 @@ public class ProgressLayout extends RelativeLayout {
 
             if (failedId == NOT_SET) {
                 throw new IllegalStateException(
-                        "cannot call showFailedView() when failedId was equals -1");
+                        "cannot call showFailedView() when failedId was NO_SET which value is -1");
             }
 
             this.failedContainer =

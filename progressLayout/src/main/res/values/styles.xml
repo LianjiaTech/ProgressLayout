@@ -4,7 +4,7 @@
   <style name="DefaultSmartStyle">
     <item name="loading_layout">@layout/default_loading_layout</item>
     <item name="none_content">@layout/default_none_layout</item>
-    <item name="network_content">@layout/default_net_error_layout</item>
+    <item name="network_content">@layout/default_connectionless_layout</item>
     <item name="failed_content">@layout/default_failed_layout</item>
   </style>
 

@@ -26,5 +26,9 @@ dependencies {
   compile 'com.android.support:appcompat-v7:23.2.1'
   /*Square Library*/
   compile 'com.jakewharton:butterknife:7.0.1'
+
+  /*Third Library*/
+//  compile 'com.github.SmartDengg:ProgressLayout:0.3'
+
   compile project(':progressLayout')
 }

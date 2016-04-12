@@ -6,6 +6,11 @@
     android:gravity="center"
     android:orientation="vertical">
 
+  <ImageView
+      android:layout_width="@dimen/material_64dp"
+      android:layout_height="@dimen/material_64dp"
+      android:scaleType="centerCrop"
+      android:src="@drawable/ic_failed"/>
 
   <TextView
       android:text="@string/retry_message"
