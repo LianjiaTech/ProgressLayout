@@ -2,15 +2,11 @@ package com.lianjiatech.infrastructure;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.IntDef;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,18 +35,21 @@ public class ProgressLayout extends RelativeLayout {
 
     private List<View> contentViews = new ArrayList<>();
 
-    public static final int LOADING = 1;/*正在加载*/
-    public static final int NONE = 2;/*无内容*/
-    public static final int CONTENT = 3;/*内容显示*/
-    public static final int NETWORK_ERROR = 4;/*网络错误*/
-    public static final int FAILED = 5;/*加载失败*/
+    public enum LAYOUT_TYPE {
 
-    @Retention(RetentionPolicy.SOURCE)
-    @IntDef(value = { LOADING, NONE, CONTENT, NETWORK_ERROR, FAILED })
-    public @interface LAYOUT_TYPE {}
+        /** 正在加载 */
+        LOADING,
+        /** 无内容 */
+        NONE,
+        /** 内容显示 */
+        CONTENT,
+        /** 网络错误 */
+        NETWORK_ERROR,
+        /** 加载失败 */
+        FAILED
+    }
 
-    @LAYOUT_TYPE
-    private int currentState = LOADING;
+    private LAYOUT_TYPE currentState = LAYOUT_TYPE.LOADING;
 
     public ProgressLayout(Context context) {
         this(context, null);
@@ -120,7 +119,7 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.showNone(null);
     }
 
-    public void showNone(@Nullable OnClickListener retryListener) {
+    public void showNone(OnClickListener retryListener) {
 
         ProgressLayout.this.showNoneView(retryListener);
 
@@ -134,7 +133,7 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.showNetError(null);
     }
 
-    public void showNetError(@Nullable OnClickListener retryListener) {
+    public void showNetError(OnClickListener retryListener) {
 
         ProgressLayout.this.showNetErrorView(retryListener);
 
@@ -148,7 +147,7 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.showFailed(null);
     }
 
-    public void showFailed(@Nullable OnClickListener retryListener) {
+    public void showFailed(OnClickListener retryListener) {
 
         ProgressLayout.this.showFailedView(retryListener);
 
@@ -168,8 +167,7 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.setContentVisibility(true);
     }
 
-    @LAYOUT_TYPE
-    public int getCurrentState() {
+    public LAYOUT_TYPE getCurrentState() {
         return currentState;
     }
 
@@ -323,23 +321,23 @@ public class ProgressLayout extends RelativeLayout {
     }
 
     public boolean isLoading() {
-        return this.currentState == LOADING;
+        return this.currentState == LAYOUT_TYPE.LOADING;
     }
 
     public boolean isContent() {
-        return this.currentState == CONTENT;
+        return this.currentState == LAYOUT_TYPE.CONTENT;
     }
 
     public boolean isNone() {
-        return this.currentState == NONE;
+        return this.currentState == LAYOUT_TYPE.NONE;
     }
 
     public boolean isNetworkError() {
-        return this.currentState == NETWORK_ERROR;
+        return this.currentState == LAYOUT_TYPE.NETWORK_ERROR;
     }
 
     public boolean isFailed() {
-        return this.currentState == FAILED;
+        return this.currentState == LAYOUT_TYPE.FAILED;
     }
 
     private void setContentVisibility(boolean visible) {
