@@ -116,6 +116,8 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.hideNetErrorView();
         ProgressLayout.this.hideFailedView();
         ProgressLayout.this.setContentVisibility(false);
+
+        this.currentState = LAYOUT_TYPE.LOADING;
     }
 
     public void showNone() {
@@ -130,6 +132,8 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.hideNetErrorView();
         ProgressLayout.this.hideFailedView();
         ProgressLayout.this.setContentVisibility(false);
+
+        this.currentState = LAYOUT_TYPE.NONE;
     }
 
     public void showNetError() {
@@ -144,6 +148,8 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.hideNoneView();
         ProgressLayout.this.hideFailedView();
         ProgressLayout.this.setContentVisibility(false);
+
+        this.currentState = LAYOUT_TYPE.NETWORK_ERROR;
     }
 
     public void showFailed() {
@@ -158,6 +164,8 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.hideNoneView();
         ProgressLayout.this.hideNetErrorView();
         ProgressLayout.this.setContentVisibility(false);
+
+        this.currentState = LAYOUT_TYPE.FAILED;
     }
 
     public void showContent() {
@@ -168,6 +176,8 @@ public class ProgressLayout extends RelativeLayout {
         ProgressLayout.this.hideFailedView();
 
         ProgressLayout.this.setContentVisibility(true);
+
+        this.currentState = LAYOUT_TYPE.CONTENT;
     }
 
     public LAYOUT_TYPE getCurrentState() {
