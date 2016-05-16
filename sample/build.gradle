@@ -27,8 +27,5 @@ dependencies {
   /*Square Library*/
   compile 'com.jakewharton:butterknife:7.0.1'
 
-  /*Third Library*/
-//  compile 'com.github.SmartDengg:ProgressLayout:0.3'
-
   compile project(':progressLayout')
 }
