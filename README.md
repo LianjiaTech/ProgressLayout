@@ -33,7 +33,7 @@
 
 可以通过下几种属性来指定不同情况需要展现的layout：
 
-```java
+```xml
 <resources>
   <declare-styleable name="ProgressLayout">
     <!--正在加载-->
@@ -53,7 +53,7 @@
 
 **在Xml中设置**
 
-```java
+```xml
 <com.lianjiatech.infrastructure.ProgressLayout
       ......
       app:loading_layout="@layout/loading_layout"
@@ -73,7 +73,7 @@
 
 如果不同的Activity需要对应不同的页面，也可以通过在Theme中指定`progressLayoutDefStyle`的方式来设置需要的Layout：
 
-```java
+```xml
   <!-- Base application theme. -->
   <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
     <!-- Customize your theme here. -->
