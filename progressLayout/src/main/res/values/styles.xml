@@ -1,0 +1,27 @@
+<resources>
+
+  <!--Default Style-->
+  <style name="DefaultSmartStyle">
+    <item name="loading_layout">@layout/default_loading_layout</item>
+    <item name="none_content">@layout/default_none_layout</item>
+    <item name="network_content">@layout/default_connectionless_layout</item>
+    <item name="failed_content">@layout/default_failed_layout</item>
+  </style>
+
+  <style name="message_style">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginTop">@dimen/material_16dp</item>
+    <item name="android:textColor">@android:color/black</item>
+    <item name="android:textSize">@dimen/material_18sp</item>
+  </style>
+
+  <style name="hint_style">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginTop">@dimen/material_16dp</item>
+    <item name="android:textColor">@android:color/darker_gray</item>
+    <item name="android:textSize">@dimen/material_13sp</item>
+  </style>
+</resources>
+

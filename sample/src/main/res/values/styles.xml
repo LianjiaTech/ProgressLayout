@@ -1,17 +1,26 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-    <style name="button_style">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">@dimen/material_4dp</item>
-        <item name="android:textSize">@dimen/material_11sp</item>
-    </style>
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="progressLayoutDefStyle">@style/progressLayoutStyle</item>
+  </style>
+
+  <style name="button_style">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_margin">@dimen/material_4dp</item>
+    <item name="android:textSize">@dimen/material_11sp</item>
+  </style>
+
+  <style name="progressLayoutStyle">
+    <item name="loading_layout">@layout/loading_layout</item>
+    <item name="none_content">@layout/none_layout</item>
+    <item name="network_content">@layout/connectionless_layout</item>
+    <item name="failed_content">@layout/failed_layout</item>
+  </style>
 
 </resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context="com.smartdengg.myapplication.MainActivity">
+
+  <HorizontalScrollView
+    android:id="@+id/scroller"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <Button
+        android:id="@+id/loading_btn"
+        style="@style/button_style"
+        android:text="显示加载" />
+
+      <Button
+        android:id="@+id/content_btn"
+        style="@style/button_style"
+        android:text="显示内容" />
+
+      <Button
+        android:id="@+id/none_btn"
+        style="@style/button_style"
+        android:text="显示无内容" />
+
+      <Button
+        android:id="@+id/net_error_btn"
+        style="@style/button_style"
+        android:text="显示网络错误" />
+
+      <Button
+        android:id="@+id/failed_btn"
+        style="@style/button_style"
+        android:text="显示加载失败" />
+    </LinearLayout>
+  </HorizontalScrollView>
+
+  <com.lianjiatech.infrastructure.ProgressLayout
+    android:id="@+id/progress_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/scroller"
+    android:layout_margin="@dimen/material_4dp"
+    android:background="@drawable/boundary_background">
+
+    <!--Content-->
+    <ImageView
+      android:id="@+id/cat_iv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:src="@drawable/ic_cat" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/cat_iv"
+      android:layout_centerInParent="true"
+      android:layout_margin="@dimen/material_8dp"
+      android:text="Have a drink,together~" />
+  </com.lianjiatech.infrastructure.ProgressLayout>
+
+  <com.lianjiatech.infrastructure.example.SmartTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginBottom="@dimen/material_8dp"
+    android:layout_marginRight="@dimen/material_8dp"
+    android:shadowColor="@android:color/holo_orange_light"
+    android:shadowDy="10"
+    android:shadowRadius="4"
+    android:text="@string/homelink"
+    android:textColor="@color/homeLinkGreen"
+    android:textSize="@dimen/material_23sp" />
+
+</RelativeLayout>

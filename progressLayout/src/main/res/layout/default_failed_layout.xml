@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_failed_layout_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+  <TextView
+      android:text="@string/retry_message"
+      style="@style/hint_style"/>
+
+  <TextView
+      style="@style/message_style"
+      android:text="@string/failed_message"
+  />
+
+</LinearLayout>
