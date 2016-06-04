@@ -8,7 +8,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/SmartDengg/ProgressLayout.svg?style=social&label=Fork&maxAge=2592000?style=plastic)](https://github.com/SmartDengg/ProgressLayout/network)
 [![GitHub issues](https://img.shields.io/github/issues/SmartDengg/ProgressLayout.svg?style=social&label=Issue&maxAge=2592000?style=plastic)](https://github.com/SmartDengg/ProgressLayout/issues)
 
-[![GitHub license](https://img.shields.io/badge/license  - Apache%202-blue.svg?style=flat-square)](LICENSE.txt)
+[![GitHub license](https://img.shields.io/badge/License  - Apache%202-blue.svg?style=flat-square)](LICENSE.txt)
 
 
 ![](./images/launcher.png)
