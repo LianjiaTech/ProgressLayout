@@ -1,6 +1,15 @@
 #ProgressLayout
 
 [![](https://jitpack.io/v/LianjiaTech/ProgressLayout.svg)](https://jitpack.io/#LianjiaTech/ProgressLayout)
+[![Method count](https://img.shields.io/badge/Method count  - 62-ff69b4.svg?style=flat)](http://www.methodscount.com/?lib=com.github.LianjiaTech%3AProgressLayout%3A1.1.0)
+[![Size](https://img.shields.io/badge/Size  - 10 KB-ff69b4.svg?style=flat)](http://www.methodscount.com/?lib=com.github.LianjiaTech%3AProgressLayout%3A1.1.0)
+
+[![GitHub stars](https://img.shields.io/github/stars/SmartDengg/ProgressLayout.svg?style=social&label=Star&maxAge=2592000?style=plastic)](https://github.com/SmartDengg/ProgressLayout/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/SmartDengg/ProgressLayout.svg?style=social&label=Fork&maxAge=2592000?style=plastic)](https://github.com/SmartDengg/ProgressLayout/network)
+[![GitHub issues](https://img.shields.io/github/issues/SmartDengg/ProgressLayout.svg?style=social&label=Issue&maxAge=2592000?style=plastic)](https://github.com/SmartDengg/ProgressLayout/issues)
+
+[![GitHub license](https://img.shields.io/badge/license  - Apache%202-blue.svg?style=flat-square)](LICENSE.txt)
+
 
 ![](./images/launcher.png)
 

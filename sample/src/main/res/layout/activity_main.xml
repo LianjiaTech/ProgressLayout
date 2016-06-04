@@ -22,7 +22,8 @@
       <Button
           android:id="@+id/loading_btn"
           android:text="显示加载"
-          style="@style/button_style"/>
+          style="@style/button_style"
+          android:elevation="0dp" />
 
       <Button
           android:id="@+id/content_btn"
@@ -89,7 +90,7 @@
       android:shadowRadius="4"
       android:shadowColor="@android:color/holo_orange_light"
       android:textColor="@android:color/holo_blue_bright"
-      android:text="@string/smartDengg"
+      android:text="@string/homelink"
   />
 
 </RelativeLayout>
