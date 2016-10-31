@@ -358,4 +358,20 @@ public class ProgressLayout extends RelativeLayout {
             contentView.setVisibility(visible ? View.VISIBLE : View.GONE);
         }
     }
+    
+    public View getFailedContainer() {
+        return failedContainer;
+    }
+
+    public View getLoadingContainer() {
+        return loadingContainer;
+    }
+
+    public View getNetworkErrorContainer() {
+        return networkErrorContainer;
+    }
+
+    public View getNoneContainer() {
+        return noneContainer;
+    }
 }
